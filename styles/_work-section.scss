@@ -1,0 +1,36 @@
+#work-section {
+    padding: 5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .work {
+        padding: 5rem;
+        color: white;
+        background-color: $bgclr;
+
+        .info {
+            padding: 0 20px 40px 20px;
+            @include links($clr);
+
+            h2 {
+                padding: 0 0 0 2rem;
+                border-left: 0.5rem solid $clr;
+            }
+        }
+
+        .col-lg-2 {
+            .circular-logo {
+                border-radius: 100px;
+                height: 67px;
+                background-color: #fff;
+                padding: 3px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .col-lg-10 {
+            ul {
+                padding: 0;
+            }
+        }
+    }
+}

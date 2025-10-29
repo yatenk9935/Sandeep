@@ -1,0 +1,24 @@
+#contact-me {
+    background-color: $bgclr;
+    padding: 5rem 0 0 0;
+    text-align: center;
+    color: white;
+
+    .card {
+        @include links($clr);
+        border-bottom: 0.25rem solid $clr;
+
+        i {
+            color: $clr;
+        }
+
+        span {
+            color: black;
+            border-bottom: 0.25rem solid $clr;
+        }
+
+        .iconbig {
+            font-size: 2rem !important;
+        }
+    }
+}

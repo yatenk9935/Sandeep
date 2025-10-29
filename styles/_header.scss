@@ -1,0 +1,91 @@
+//4.Functions and it's parameters 
+@mixin links($color) {
+    a {
+        color: $color;
+        text-decoration: none;
+    }
+}
+
+.faded {
+    background-color: white;
+    max-width: 100%;
+    padding: 1.5rem 9%;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 20%);
+
+    a {
+        color: $bgclr;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $clr !important;
+        }
+    }
+}
+
+header {
+    @include links(gray);
+    background-color: transparent;
+    padding: 1.5rem 3rem;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease; // Use transition on the main element not on their class 
+
+    #mainbtn1 {
+        color: $clr !important;
+        text-decoration: none;
+        border: 3px solid $clr !important;
+        border-radius: 0.5rem;
+    }
+
+    .home {
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: rgb(64, 64, 64);
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        column-gap: 3rem;
+
+        a {
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: rgb(64, 64, 64);
+            }
+        }
+    }
+
+    .links-open {
+        display: flex !important;
+        row-gap: 1rem !important;
+        flex-flow: column;
+        background-color: white;
+        position: absolute;
+        z-index: 99;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 7.5px 10px rgb(0 0 0 / 20%);
+
+        #mainbtn1 {
+            border: unset !important;
+            padding: unset !important;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+}

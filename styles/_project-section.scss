@@ -1,0 +1,35 @@
+#project-section {
+    padding: 5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .work {
+        color: black;
+        padding: 0 20px 40px 20px;
+
+        h2 {
+            padding: 0 0 0 2rem;
+            border-left: 0.5rem solid $clr;
+        }
+    }
+
+    .projects {
+        background-color: $bgclr;
+
+        #text-column {
+            @include links($clr);
+            padding: 5rem;
+            text-align: end;
+
+            a {
+                padding: 1rem 1.5rem 2.5rem 1.5rem;
+                border-bottom: 0.25rem solid $clr;
+            }
+        }
+
+        #image-column {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
