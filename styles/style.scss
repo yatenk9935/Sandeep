@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+//Features of scss/sass
+
+/*5.Inherit properties
+.contact {
+    @extend header;
+}*/
+
+/*6.Calulations
+.contact {
+    width: 100% - 20%;
+}
+*/
+
+//3.Seprate files
+@import "./variables";
+@import "./header";
+@import "./about-me";
+@import "./work-section";
+@import "./project-section";
+@import "./contact-me";
+@import "./media";
+
+#background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../Images/bgfinal.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+  //2.Nesting
+  #gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.1) 0,
+      rgba(22, 22, 22, 0.5) 75%,
+      $bgclr 100%
+    );
+  }
+
+  .for-gap {
+    padding-top: 5rem;
+  }
+
+  #about {
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgb(255, 251, 251);
+      box-shadow: 0 0 10px 5px rgb(255 255 255 / 20%);
+      overflow: hidden;
+      position: relative;
+      margin: auto;
+      top: 5rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .intro {
+      position: relative;
+      top: 7.5rem;
+      text-align: center;
+
+      h6 {
+        font-size: 5rem;
+        line-height: 5rem;
+        letter-spacing: 0.5rem;
+        color: white;
+      }
+
+      .skills {
+        width: 45rem;
+        margin: auto;
+
+        h5 {
+          margin-top: 1rem;
+          font-size: 1.25rem;
+          color: #ffffff80;
+        }
+      }
+
+      a {
+        color: white;
+        background-color: $clr;
+        border: none;
+        border-radius: 0.25rem;
+        letter-spacing: 0.1rem;
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgb(0 0 0 / 10%);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $bgclr;
+  padding: 0 0 6rem 0;
+}
