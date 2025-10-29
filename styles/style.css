@@ -295,7 +295,7 @@ header .menu {
 #background {
   width: 100%;
   height: 100%;
-  background-image: url("../images/bgfinal.jpg");
+  background-image: url("./Images/bgfinal.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
